@@ -1,0 +1,135 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/ekrem/RiderProjects/ln-masstransit/src/MassConsumer/MassConsumer.csproj": {}
+  },
+  "projects": {
+    "/home/ekrem/RiderProjects/ln-masstransit/src/MassConsumer/MassConsumer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/ekrem/RiderProjects/ln-masstransit/src/MassConsumer/MassConsumer.csproj",
+        "projectName": "MassConsumer",
+        "projectPath": "/home/ekrem/RiderProjects/ln-masstransit/src/MassConsumer/MassConsumer.csproj",
+        "packagesPath": "/home/ekrem/.nuget/packages/",
+        "outputPath": "/home/ekrem/RiderProjects/ln-masstransit/src/MassConsumer/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/ekrem/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/home/ekrem/RiderProjects/ln-masstransit/src/MassShared/MassShared.csproj": {
+                "projectPath": "/home/ekrem/RiderProjects/ln-masstransit/src/MassShared/MassShared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "MassTransit": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "MassTransit.RabbitMQ": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.19.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.112/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/ekrem/RiderProjects/ln-masstransit/src/MassShared/MassShared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/ekrem/RiderProjects/ln-masstransit/src/MassShared/MassShared.csproj",
+        "projectName": "MassShared",
+        "projectPath": "/home/ekrem/RiderProjects/ln-masstransit/src/MassShared/MassShared.csproj",
+        "packagesPath": "/home/ekrem/.nuget/packages/",
+        "outputPath": "/home/ekrem/RiderProjects/ln-masstransit/src/MassShared/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/ekrem/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.112/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

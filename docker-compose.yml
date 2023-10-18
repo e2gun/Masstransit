@@ -1,0 +1,35 @@
+version: '3.4'
+
+services:
+  massproducer:
+    image: ${DOCKER_REGISTRY-}massproducer
+    build:
+      context: .
+      dockerfile: src/MassProducer/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=1q2w3E*
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+    volumes:
+      - ~/.aspnet/https:/https:ro
+    ports:
+        - '7048:80'     
+        - '7047:443'     
+    depends_on:
+      - "rabbitmq"
+  
+  rabbitmq:
+    container_name: "rabbitmqcontainer"
+    image: rabbitmq:management
+    hostname: "rabbitmq"
+    ports:
+        - '5672:5672'
+        - '15672:15672'
+
+  masstransit.consumer:
+    image: ${DOCKER_REGISTRY-}massconsumer
+    build:
+      context: .
+      dockerfile: src/MassConsumer/Dockerfile
+    depends_on:
+      - "rabbitmq"
